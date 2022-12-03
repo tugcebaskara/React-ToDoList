@@ -13,8 +13,10 @@ function TodoForm(props) {
     setInput(e.target.value);
   };
 
+
+  // istek atılan fonksiyon içerisindeki değere dikkat edilecek...
   const handleSubmit = (e) => {
-    e.preventdefault();
+    e.preventDefault();
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
