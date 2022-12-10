@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
-import { TiEdit } from 'react-icons/ti';
+import {BsFillPinAngleFill} from "react-icons/bs";
 
 const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   const [edit, setEdit] = useState({
@@ -34,7 +34,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
           onClick={() => removeTodo(todo.id)}
           className='delete-icon'
         />
-        <TiEdit
+        <BsFillPinAngleFill
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
           className='edit-icon'
         />
